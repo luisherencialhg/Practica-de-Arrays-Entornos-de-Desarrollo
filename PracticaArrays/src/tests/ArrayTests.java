@@ -14,4 +14,11 @@ public class ArrayTests {
         int resultado = MisArrays.maximaNota(notasValidas);
         assertEquals(9, resultado); // La máxima de {7, 8, 9, 5, 6} es 9
     }
+	
+	@Test
+    public void testMinimaNota() {
+		int[] notasValidas = new int[]{7, 8, 9, 5, 6};
+        int resultado = MisArrays.minimaNota(notasValidas);
+        assertEquals(5, resultado); // La mínima de {7, 8, 9, 5, 6} es 5
+    }
 }
