@@ -35,4 +35,9 @@ public class ArrayTests {
         int resultado = MisArrays.minimaNota(notasValidas);
         assertEquals(5, resultado); // La mínima de {7, 8, 9, 5, 6} es 5
     }
+	 @Test
+	    public void testMediana() {
+	        float resultado = MisArrays.medianaNotas(notasValidas);
+	        assertEquals(7.0f, resultado, 0.001); // La mediana de {7, 8, 9, 5, 6} es 7.0
+	    }
 }
