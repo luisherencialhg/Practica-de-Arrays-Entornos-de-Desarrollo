@@ -5,6 +5,28 @@ import java.util.Arrays;
 public abstract class MisArrays {
 	
 	/**
+	 * Calcula la media de los numeros en el array.
+	 * @param notas Array de números enteros entre 0 y 10.
+	 * @return La media de los elementos del array.
+	 * @throws IllegalArgumentException Si algún número del array no está entre 0 y 10.
+	 */
+	
+    public static float mediaNotas(int[] notas) {
+        for (int nota : notas) {
+            if (nota < 0 || nota > 10) {
+                throw new IllegalArgumentException("La nota " + nota + " está fuera del rango permitido [0, 10]");
+            }
+        }
+
+        int sum = 0;
+        for (int nota : notas) {
+            sum += nota;
+        }
+        return (float) sum / notas.length; // Cálculo de la media
+    }
+
+	
+	/**
      * Calcula la mediana
      * @param notas es Array de números enteros entre 0 y 10.
      * @return La mediana de los elementos del array.
